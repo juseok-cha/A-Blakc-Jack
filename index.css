@@ -15,3 +15,11 @@ body {
 #message-el {
   font-style: italic;
 }
+
+button {
+  width: 150px;
+  color: #016f32;
+  background: goldenrod;
+  padding: 5px;
+  border-radius: 2px;
+}
