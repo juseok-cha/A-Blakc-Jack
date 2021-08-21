@@ -1,21 +1,21 @@
-let firstCard = 10
+let firstCard = 9
 let secondCard = 11
 let sum = firstCard + secondCard
 let hasBlackJack =  false
-// 1. Create a variable called isAlived and assign it to true. 
 let isAlived = true
+// 1. Declare a variable called message and assign its value to an empty string. 
+let message = ""
 
-// 2. Flip its value to false in the appropriate code block. 
-
+// 2. Reassign the message variable to the string we're logging out. 
 if (sum <= 20 ) {
-    console.log("Do you want to draw a new card?")
+    message = "Do you want to draw a new card?"
 } else if (sum === 21) {
-    console.log("Wohoo! You've got Blackjack!")
+    message = "Wohoo! You've got Blackjack!"
     hasBlackJack = true
 } else {
-    console.log("You are out of the game.")
+    massage = "You are out of the game."
     isAlived = false
 }
 
-// CASH OUT!
-console.log(hasBlackJack)
+// 3. Log it out. 
+console.log(message)
