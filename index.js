@@ -5,9 +5,11 @@ let hasBlackJack =  false
 let isAlived = true
 let message = ""
 
+// 1. Store the message-el paragrah in a variable called messageEl
+let messageEl = document.getElementById("message-el")
+console.log(messageEl)
 
 
-// 2. Create a startbutton. 
 function startGame(){
 
     if (sum <= 20 ) {
@@ -20,7 +22,7 @@ function startGame(){
         isAlived = false
     }
     
-    // 3. Log it out. 
-    console.log(message)
+    // 2. Display the message in th emessageEl using messageEl.textContent. 
+    messageEl.textContent = message
 
 }
