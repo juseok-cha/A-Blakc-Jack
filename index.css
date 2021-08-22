@@ -15,11 +15,14 @@ body {
 #message-el {
   font-style: italic;
 }
-
+/* 3. Make sure that two buttons have some space between each other when they are rendered out vertically. */
 button {
+  font-weight: bold;
   width: 150px;
   color: #016f32;
   background: goldenrod;
+  border: none;
   padding: 5px;
   border-radius: 2px;
+  margin: 0px 10px 3px 10px;
 }
