@@ -8,7 +8,13 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.querySelector("#cards-el")
 
+// Create a new function called startGame() that calls renderGame()
 function startGame(){
+    renderGame()
+}
+
+
+function renderGame(){
     cardsEl.textContent  = "Cards: " + firstCard + " " +secondCard
     sumEl.textContent = "Sum: " + sum
     if (sum <= 20 ) {
@@ -19,20 +25,13 @@ function startGame(){
     } else {
         message = "You are out of the game!"
         isAlived = false
-        console.log("hi")
     }
 
     messageEl.textContent = message
 }
 
 function newCard() {
-    // 1. Create a card variable, and hard code its value to a number. 
-
-    // 2. Add the new card to the sum variable
-
-    // 3. Call startGame()
-
     let card = 1
     sum += card
-    startGame()
+    renderGame()
 }
