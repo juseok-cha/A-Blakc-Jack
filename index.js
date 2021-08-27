@@ -1,5 +1,5 @@
-let firstCard = 9
-let secondCard = 11
+let firstCard = getRendomCard()
+let secondCard = getRendomCard()
 let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard
 let hasBlackJack =  false
@@ -9,14 +9,18 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.querySelector("#cards-el")
 
+
+// Create a function, getRendomCard(), that always return number 5
+function getRendomCard() {
+    return 5;
+}
+
 function startGame(){
     renderGame()
 }
 
-
 function renderGame(){
     cardsEl.textContent  = "Cards: " 
-    // Create a loop that renders out all the cards instead of just two 
     for ( let i = 0; i < cards.length; i++){
         cardsEl.textContent += cards[i] + " "
 
@@ -36,7 +40,7 @@ function renderGame(){
 }
 
 function newCard() {
-    let card = 1
+    let card = getRendomCard()
     sum += card
     cards.push(card)
     renderGame()
