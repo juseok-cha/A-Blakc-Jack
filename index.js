@@ -10,9 +10,9 @@ let sumEl = document.getElementById("sum-el")
 let cardsEl = document.querySelector("#cards-el")
 
 
-// Create a function, getRendomCard(), that always return number 5
+// Make this function return a random number between 1 to 13
 function getRendomCard() {
-    return 5;
+    return Math.floor(Math.random() * 13 + 1)
 }
 
 function startGame(){
