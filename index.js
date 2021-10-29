@@ -9,6 +9,7 @@ let cardsEl = document.querySelector("#cards-el")
 
 console.log(cards)
 
+// 랜덤으로 숫자를 생성하는 함수
 function getRandomCard() {
     let randomNumber = Math.floor(Math.random() * 13 + 1)
     if (randomNumber > 10) {
@@ -21,6 +22,7 @@ function getRandomCard() {
     
 }
 
+// 게임을 시작하는 함수, 두개의 카드를 정의함 
 function startGame(){
     isAlived = true
     // Generate two random numbers 
@@ -30,9 +32,9 @@ function startGame(){
     cards = [firstCard, secondCard]
     sum = firstCard + secondCard
     renderGame()
-    sum = 0
 }
 
+// 게임을 진행하는 함수 
 function renderGame(){
     cardsEl.textContent  = "Cards: " 
     for ( let i = 0; i < cards.length; i++){
@@ -54,8 +56,12 @@ function renderGame(){
 }
 
 function newCard() {
-    let card = getRendomCard()
-    sum += card
-    cards.push(card)
-    renderGame()
+    // Only allow the player to get a new card if she IS alive and does NOT have blackjack
+    if (isAlived === true && hasBlackJack === false) {
+        let card = getRandomCard()
+        sum += card
+        cards.push(card)
+        renderGame()
+    }
+    
 }
