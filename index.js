@@ -1,3 +1,8 @@
+// 2. Create the player object. Give it two keys, name and chips. 
+let player = {
+    name: "Per",
+    chips: 145
+}
 let cards = []
 let sum = 0
 let hasBlackJack =  false
@@ -6,14 +11,12 @@ let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.querySelector("#cards-el")
-
-let player = {
-    name: "Per",
-    chips: 145
-}
-
+// 3. Grab ahold of the player-el paragraph and store it in a variable called playerEl 
 let playerEl = document.getElementById("player-el")
-playerEl.textContent = player.name + ": $" + player.chips
+console.log(playerEl)
+
+// 4. Render the player's name and chips in playerEl
+playerEl.textContent = player.name +": $" + player.chips
 
 // 랜덤으로 숫자를 생성하는 함수
 function getRandomCard() {
